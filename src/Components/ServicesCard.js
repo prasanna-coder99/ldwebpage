@@ -3,34 +3,35 @@ import React from 'react';
 
 const ServiceCard = ({ title, description, tags, imageAlt, imageSrc }) => {
   return (
-    <div className="bg-[#1e1e1e] rounded-3xl my-8 flex flex-col lg:flex-row overflow-hidden min-h-[500px] lg:min-h[500px]">
+    <div className="bg-[#1e1e1e] rounded-3xl [min-width:2500px]:rounded-[40px] my-8 flex flex-col lg:flex-row overflow-hidden min-h-[350px]  sm:min-h-[400px] lg:min-h-[500px] [min-width:2500px]:min-h-[700px]">
 
       
-      <div className="flex-1 p-8 text-center lg:text-left">
-        <h3 className="text-3xl sm:text-4xl font-normal mb-4 text-gray-100">{title}</h3>
+      <div className="flex-1 p-6 [min-width:2500px]:p-20 text-center lg:text-left">
+        <h3 className="text-3xl sm:text-4xl [min-width:2500px]:text-5xl font-normal mb-4 text-gray-100">{title}</h3>
       
-       <p className="text-gray-400 mb-4 lg:mb-6 max-w-full sm:max-w-lg mx-auto lg:mx-0 pb-4 lg:pb-10 text-base sm:text-[18px]">
+       <p className="text-gray-400 mb-4 lg:mb-6 max-w-full sm:max-w-lg mx-auto lg:mx-0 pb-4 lg:pb-10 text-base sm:text-[18px] [min-width:2500px]:text-[22px]">
       {description}
       </p>
 
-        <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-1 lg:gap-4">
+        <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-1 lg:gap-4 [min-width:2500px]:gap-6">
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-[#FFFFFF] text-black text-xs sm:text-sm lg:text-base  font-normal px-4 py-3 rounded-full  transition-colors"
+              className="bg-[#FFFFFF] text-black text-xs sm:text-sm lg:text-base [min-width:2500px]:text-xl [min-width:2500px]:font-medium font-normal px-4 py-3  [min-width:2500px]:px-8 [min-width:2500px]:py-4 rounded-full  transition-colors"
             >
               {tag}
             </span>
           ))}
         </div>
       </div>
+    
       
      
-  <div className="flex-1 w-full lg:w-auto flex justify-end items-stretch pt-12">
+  <div className="flex-1 w-full lg:w-auto flex justify-end items-stretch pt-12 [min-width:2500px]:pt-20">
   <img
     src={imageSrc}
     alt={imageAlt}
-    className="w-[700px] h-auto object-cover  rounded-tl-[60px] rounded-tr-none rounded-br-none rounded-bl-none mt-10"
+    className="w-[700px] h-auto object-contain   rounded-tl-[60px] [min-width:2500px]:rounded-tl-[80px] rounded-tr-none rounded-br-none rounded-bl-none mt-10"
   />
 </div>
 
@@ -85,14 +86,14 @@ const Services = () => {
   ];
 
   return (
-    <section className="bg-gray-950 text-gray-100 font-sans min-h-screen flex flex-col py-16 px-4 sm:px-8 lg:px-16">
-      <div className="flex-1 flex flex-col">
+    <section className=" w-full [min-width:2500px]:w-[2500px] bg-gray-950 text-gray-100 font-sans min-h-screen flex flex-col py-16 px-4 sm:px-8 lg:px-16">
+      <div className="mx-auto [min-width:2500px]:px-[500px] [min-width:2500px]:py-20 w-full">
       <div className="max-w-5xl ml-14 text-left mb-12 sm:mb-20">
-        <h1 className="text-xl sm:text-4xl lg:text-6xl font-medium text-[#989898] leading-relaxed tracking-wide pt-12">
+        <h1 className="text-xl sm:text-4xl lg:text-6xl  [min-width:2500px]:text-7xl font-medium text-[#989898] leading-relaxed tracking-wide pt-12">
           WE CREATE DIGITAL SOLUTIONS THAT ELEVATE YOUR BRAND AND BRING YOUR IDEAS TO LIFE.
         </h1>
       </div>
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full mx-auto">
         {servicesData.map((service, index) => (
           <ServiceCard 
             key={index}
@@ -106,6 +107,7 @@ const Services = () => {
         ))}
       </div>
       </div>
+      
      <footer className="bg-black py-8 px-6 sm:px-12 lg:px-24 text-white text-sm">
     <div className="max-w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
       <p className="font-sans">© 2024. All Rights Reserved</p>
@@ -113,6 +115,7 @@ const Services = () => {
         Privacy Policy
       </a>
     </div>
+    
   </footer>
     </section>
   );

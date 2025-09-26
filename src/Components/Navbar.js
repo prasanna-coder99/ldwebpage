@@ -18,7 +18,7 @@ function Navbar({onNavClick, activePage }) {
         <img
           src="https://ldintertech.com/static/media/LOGO.d5ab94ef934e54b8ebf4.png"
           alt="Intertech Innovation Logo"
-          className="h-10 sm:h-20 ml-2 sm:ml-32 w-auto"
+          className="h-10 sm:h-20 ml-2 sm:ml-32 w-45"
         />
       </div>
 
@@ -50,7 +50,7 @@ function Navbar({onNavClick, activePage }) {
     bg-white
     ${activePage === "contact"
       ? "text-[#a374ff] font-bold italic"   
-      : "text-black hover:text-white hover:bg-[#a374ff] font-bold"
+      : "text-black hover:text-white hover:bg-[#a374ff] font-medium"
     }`}
 >
   Contact
