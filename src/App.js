@@ -20,12 +20,12 @@ function App() {
   };
 
   return (
-    <div className="bg-black text-white overflow-x-hidden">
+    <div className="bg-black text-white flex flex-col min-h-screen">
 
       
       <Navbar onNavClick={handleNavClick} activePage={activePage} />
 
-    
+      
       {activePage === "home" && (
         <>
           
@@ -40,8 +40,9 @@ function App() {
             </div>
           </div>
 
-          
+         
           <AboutSection onNavClick={handleNavClick} />
+         
           <Services />
           <OurWork />
           <SuperPowers />
@@ -54,7 +55,7 @@ function App() {
       {activePage === "services" && <ServicesCard />}
       {activePage === "about" && <About />}
       {activePage === "contact" && <Contact />}
-
+   
     </div>
   );
 }

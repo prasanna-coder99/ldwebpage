@@ -2,19 +2,19 @@ import React from "react";
 
 function AboutSection({ onNavClick }) {
   return (
-    <section className="w-full [min-width:2500px]:w-[2500px] bg-black text-gray-400 font-sans py-20 px-8 lg:px-24 3xl:px-60">
-       <div className="px-4 [min-width:2500px]:px-[500px] [min-width:2500px]:pt-20">
+    <section className="w-full [min-width:2500px]:w-[2500px] bg-black text-[#A9A9A9] font-sans py-20 px-8 lg:px-24 3xl:px-60">
+       <div className="px-4 [min-width:2500px]:px-[500px] [min-width:2500px]:pt-20 leading-sung">
       <div className="flex flex-col lg:flex-row items-star">
        
         <div className="lg:w-1/3 mb-10 lg:mb-0 lg:pr-10 [min-width:2500px]:w-1/4">
-          <h2 className="text-white text-xl sm:text-2xl italic font-light [min-width:2500px]:text-7xl">
-          <span className="font-light">ABOUT</span> <span className="font-light">US</span>
+          <h2 className="text-white text-xl sm:text-2xl md:text-5xl font-light [min-width:2500px]:text-7xl traclking-wide">
+          <span className="font-light  italic">ABOUT</span> <span className="font-light">US</span>
          </h2>
 
         </div>  
 
        
-        <div className="lg:w-2/3 [min-width:2500px]:w-3/5">
+        <div className="lg:w-3/4 [min-width:2500px]:w-3/5">
           <p className="mb-6 text-lg leading-relaxed lg:text-4xl [min-width:2500px]:text-3xl">
             Welcome to LD InterTech Innovation, your partner for cutting-edge technology and marketing solutions. We offer comprehensive services in hardware, software, cloud technologies, and digital marketing, specifically designed to guide businesses into the digital future.
           </p><br/>

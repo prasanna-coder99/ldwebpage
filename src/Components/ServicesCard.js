@@ -17,7 +17,7 @@ const ServiceCard = ({ title, description, tags, imageAlt, imageSrc }) => {
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-[#FFFFFF] text-black text-xs sm:text-sm lg:text-base [min-width:2500px]:text-xl [min-width:2500px]:font-medium font-normal px-4 py-3  [min-width:2500px]:px-8 [min-width:2500px]:py-4 rounded-full  transition-colors"
+              className="bg-[#FFFFFF] text-[#535353] text-xs sm:text-sm lg:text-base [min-width:2500px]:text-xl [min-width:2500px]:font-medium font-normal px-4 py-3  [min-width:2500px]:px-8 [min-width:2500px]:py-4 rounded-full  transition-colors"
             >
               {tag}
             </span>
@@ -27,11 +27,12 @@ const ServiceCard = ({ title, description, tags, imageAlt, imageSrc }) => {
     
       
      
-  <div className="flex-1 w-full lg:w-auto flex justify-end items-stretch pt-12 [min-width:2500px]:pt-20">
+ <div className="flex-1 w-full lg:w-auto flex justify-end items-end pt-12 [min-width:2500px]:pt-20">
   <img
     src={imageSrc}
     alt={imageAlt}
-    className="w-[700px] h-auto object-contain   rounded-tl-[60px] [min-width:2500px]:rounded-tl-[80px] rounded-tr-none rounded-br-none rounded-bl-none mt-10"
+    className="w-[700px] h-auto object-contain rounded-tl-[60px] [min-width:2500px]:rounded-tl-[80px] 
+               rounded-tr-none rounded-br-none rounded-bl-none mt-10"
   />
 </div>
 
@@ -89,11 +90,11 @@ const Services = () => {
     <section className=" w-full [min-width:2500px]:w-[2500px] bg-gray-950 text-gray-100 font-sans min-h-screen flex flex-col py-16 px-4 sm:px-8 lg:px-16">
       <div className="mx-auto [min-width:2500px]:px-[500px] [min-width:2500px]:py-20 w-full">
       <div className="max-w-5xl ml-14 text-left mb-12 sm:mb-20">
-        <h1 className="text-xl sm:text-4xl lg:text-6xl  [min-width:2500px]:text-7xl font-medium text-[#989898] leading-relaxed tracking-wide pt-12">
+        <h1 className="text-xl sm:text-4xl lg:text-6xl  [min-width:2500px]:text-7xl font-medium text-[#989898] leading-loose tracking-wide pt-12">
           WE CREATE DIGITAL SOLUTIONS THAT ELEVATE YOUR BRAND AND BRING YOUR IDEAS TO LIFE.
         </h1>
       </div>
-      <div className="w-full mx-auto">
+      <div className="w-full px-[40px] text-[#989898]">
         {servicesData.map((service, index) => (
           <ServiceCard 
             key={index}
